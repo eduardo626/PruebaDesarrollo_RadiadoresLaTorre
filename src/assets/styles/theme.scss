@@ -1,0 +1,26 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$RTErickCanto-primary: mat-palette($mat-indigo);
+$RTErickCanto-accent: mat-palette($mat-pink, A200, A100, A400);
+
+$RTErickCanto-warn: mat-palette($mat-red);
+$RTErickCanto-theme: mat-light-theme(
+    (
+        color: (
+            primary: $RTErickCanto-primary,
+            accent: $RTErickCanto-accent,
+            warn: $RTErickCanto-warn,
+        ),
+    )
+);
+
+@include angular-material-theme($RTErickCanto-theme);
+
+h1 {
+    color: mat-color($RTErickCanto-primary) !important;
+}
+
+.border-botom {
+    color: mat-color($RTErickCanto-primary);
+}
