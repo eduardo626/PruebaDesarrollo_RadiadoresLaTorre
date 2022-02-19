@@ -4,10 +4,14 @@ export interface Pokemon {
 }
 
 export interface DetailPokemon {
+    id: number,
+    name: string,
     sprite: Sprite,
     abilities: Ability[],
     base_experience: number;
-    moves: Move[]
+    moves: Move[],
+    stats: Stat[],
+    types: Type[]
 }
 
 export interface Sprite {
@@ -29,5 +33,20 @@ export interface Move {
         name: string,
         url: string
     }
+}
 
+export interface Stat {
+    base_stat: number;
+    effort: number;
+    stat: {
+        name: string;
+        url: string;
+    }
+}
+
+export interface Type {
+    type: {
+        name: string,
+        url: string;
+    }
 }

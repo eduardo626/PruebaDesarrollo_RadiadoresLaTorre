@@ -1,1 +1,9 @@
-<p>list-pokemons works!</p>
+<mat-card *ngFor="let pokemon of pokemons">
+    <div class="listPokemon">
+        <mat-card-title>{{pokemon.name}}</mat-card-title>
+        <span class="spacer"></span>
+        <button mat-flat-button color="accent" (click)="showPokemon(pokemon.url)">
+            <mat-icon>catching_pokemon</mat-icon> Ver Información
+        </button>
+    </div>
+</mat-card>

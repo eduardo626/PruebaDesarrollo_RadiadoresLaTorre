@@ -9,6 +9,17 @@
     }
 }
 
-.spacer {
-    flex: 1 1 auto;
+.paginator {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    span {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }

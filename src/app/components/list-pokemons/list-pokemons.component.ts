@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Pokemon } from 'src/app/models/pokemon';
 
 @Component({
   selector: 'app-list-pokemons',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListPokemonsComponent implements OnInit {
 
+  @Input() pokemons: Pokemon[];
+  @Output() link = new EventEmitter<string>();
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showPokemon(url: string) {
+    this.link.emit(url);
+  }
 }

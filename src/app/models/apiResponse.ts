@@ -4,5 +4,5 @@ export interface ApiResponse {
     count: number;
     next: string;
     previous: string | null;
-    result: Pokemon[]
+    results: Pokemon[]
 }

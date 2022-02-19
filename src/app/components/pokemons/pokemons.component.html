@@ -1,24 +1,35 @@
 <mat-card class="mat-elevation-z0 border-botom">
     <mat-card-content>
         <div class="header-component">
-            <h1>Lista De Pokemons</h1>
+            <h1>Lista De Pokémons</h1>
             <span class="spacer"></span>
             <button mat-flat-button color="warn" [routerLink]="['/home']">
-                <mat-icon>arrow_back_ios</mat-icon> Regresar
+                <mat-icon>navigate_before</mat-icon> Regresar
             </button>
         </div>
     </mat-card-content>
 </mat-card>
-
-<mat-card>
-    <mat-card-content>
-        <div class="split-container-2">
-            <div class="container">
-
+<div class="box-container">
+    <mat-card>
+        <mat-card-content>
+            <div class="split-container-2">
+                <div class="container">
+                    <app-list-pokemons [pokemons]="pokemons |async" (link)="loadPokemon($event)"></app-list-pokemons>
+                </div>
+                <div class="container">
+                    <app-detail-pokemon [pokemon]="pokemon |async"></app-detail-pokemon>
+                </div>
             </div>
-            <div class="container">
-
+            <div class="paginator">
+                <button color="warn" mat-flat-button [disabled]="!(previusPage!=null)" (click)="loadPreviousPage()">
+                    <mat-icon>navigate_before</mat-icon> Página Anterior
+                </button>
+                <span>Total Pokémons: {{totalPokemons}}</span>
+                <button color="primary" mat-flat-button [disabled]="!(nextPage!=null)" (click)="loadNextPage()">
+                    Siguiente Página <mat-icon>navigate_next</mat-icon>
+                </button>
             </div>
-        </div>
-    </mat-card-content>
-</mat-card>
+        </mat-card-content>
+    </mat-card>
+
+</div>
