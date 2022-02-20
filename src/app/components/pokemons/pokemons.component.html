@@ -14,7 +14,7 @@
         <mat-card-content>
             <div class="split-container-2">
                 <div class="container">
-                    <app-list-pokemons [pokemons]="pokemons |async" (link)="loadPokemon($event)"></app-list-pokemons>
+                    <app-list-pokemons [pokemons]="pokemons |async" (link)="loadPokemon($event)" [pokemonSelect]="pokemon.value ? pokemon.value.name : ''"></app-list-pokemons>
                 </div>
                 <div class="container">
                     <app-detail-pokemon [pokemon]="pokemon |async"></app-detail-pokemon>

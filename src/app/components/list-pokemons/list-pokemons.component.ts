@@ -10,7 +10,7 @@ export class ListPokemonsComponent implements OnInit {
 
   @Input() pokemons: Pokemon[];
   @Output() link = new EventEmitter<string>();
-
+  @Input() pokemonSelect: string;
 
   constructor() { }
 

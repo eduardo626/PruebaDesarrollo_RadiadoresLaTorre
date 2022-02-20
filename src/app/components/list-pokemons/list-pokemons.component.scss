@@ -4,3 +4,35 @@
     justify-content: center;
     align-items: center;
 }
+
+.card{
+    margin: 10px !important;
+}
+
+.select{
+    border: solid 2px;
+}
+
+.div-pokemons{
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+@media screen and (max-width: 800px) {
+    .listPokemon {
+        flex-direction: column;
+        .spacer{
+            flex: none;
+        }
+    }
+
+    .div-pokemons{
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+}

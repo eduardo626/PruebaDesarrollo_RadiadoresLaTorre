@@ -1,5 +1,7 @@
 <div class="center" *ngIf="!pokemon">
-    <mat-spinner></mat-spinner>
+    <mat-card>
+        <mat-card-title class="txt-center">Seleccione un Pokemon para consultar la informacion</mat-card-title>
+    </mat-card>
 </div>
 
 <div *ngIf="pokemon">
@@ -9,7 +11,7 @@
             <img [src]="pokemon.sprites.back_default" alt="Back">
         </div>
         <mat-card-title class="txt-center">{{pokemon.name}}</mat-card-title>
-        <mat-card-subtitle class="txt-centerks">Experiencia Base: {{pokemon.base_experience}}</mat-card-subtitle>
+        <mat-card-subtitle class="txt-center">Experiencia Base: {{pokemon.base_experience}}</mat-card-subtitle>
         <p class="txt-m-0 txt-p-0"> <b>Tipo:</b> {{pokemon.types | TypesPokemon}}</p>
         <p class="txt-m-0 txt-p-0"> <b>Habilidades:</b> {{pokemon.abilities | AbilitiesPokemon}}</p>
         <p class="txt-m-0 txt-p-0"> <b>Movimientos:</b> {{pokemon.moves | MovesPokemon}}</p>

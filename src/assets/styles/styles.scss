@@ -37,10 +37,7 @@ body {
   box-sizing: border-box;
   .container {
     width: 50%;
-  }
-
-  .container {
-    width: 50%;
+    max-height: 500px;
   }
 }
 
@@ -59,5 +56,6 @@ body {
 .box-container {
   padding-left: 8%;
   padding-right: 8%;
+  padding-top: 10px;
+  min-height: 500px;
 }
-
