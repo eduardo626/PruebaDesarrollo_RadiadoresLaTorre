@@ -8,3 +8,15 @@
         height: auto;
     }
 }
+
+.card{
+    margin: 5px !important;
+}
+
+.detail-pokemon{
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}

@@ -4,8 +4,8 @@
     </mat-card>
 </div>
 
-<div *ngIf="pokemon">
-    <mat-card>
+<div class="detail-pokemon" *ngIf="pokemon">
+    <mat-card class="card">
         <div class="sprites">
             <img [src]="pokemon.sprites.front_default" alt="Front">
             <img [src]="pokemon.sprites.back_default" alt="Back">
