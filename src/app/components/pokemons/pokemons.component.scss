@@ -33,5 +33,13 @@
         }
     }
 
+    .paginator {
+        flex-wrap: wrap;
+        flex-direction: column;
+        span{
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    }
 
 }
